@@ -1,0 +1,34 @@
+{
+  "name": "sample_node_project05",
+  "version": "0.0.1",
+  "description": "simple api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danhdds/sample_node_project05.git"
+  },
+  "keywords": [
+    "express",
+    "mongoose",
+    "api",
+    "rest"
+  ],
+  "author": "Danhdds (Danilo Abreu)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.15.4",
+    "npm": ">=6.14.10"
+  },
+  "bugs": {
+    "url": "https://github.com/danhdds/sample_node_project05/issues"
+  },
+  "homepage": "https://github.com/danhdds/sample_node_project05#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7"
+  }
+}
