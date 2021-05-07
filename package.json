@@ -13,7 +13,7 @@
   },
   "keywords": [
     "express",
-    "mongoose",
+    "mysql",
     "api",
     "rest"
   ],
@@ -29,6 +29,6 @@
   "homepage": "https://github.com/danhdds/sample_node_project05#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.12.7"
+    "mysql": "^2.18.1"
   }
 }
