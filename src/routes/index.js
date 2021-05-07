@@ -16,7 +16,7 @@ exports.appRouter = router => {
     router.get('/matriculas', matriculaController.getMatriculas);
     router.post('/criar-matricula', matriculaController.setMatricula);
 
-    router.get('/faturas', faturasController.getFaturas);
-    router.post('/criar-fatura', faturasController.setFatura);
+    router.get('/faturas', faturaController.getFaturas);
+    router.post('/criar-fatura', faturaController.setFatura);
 
 } // end appRouter
