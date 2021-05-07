@@ -1,7 +1,7 @@
 instituicaoEnsinoController = require('../controllers/instituicaoEnsinoController.js');
 alunoController = require('../controllers/alunoController.js');
 matriculaController = require('../controllers/matriculaController.js');
-faturasController = require('../controllers/faturasController.js');
+faturaController = require('../controllers/faturaController.js');
 
 matriculaController = require('../controllers/matriculaController.js');
 
