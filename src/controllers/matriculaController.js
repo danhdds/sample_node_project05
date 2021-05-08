@@ -6,7 +6,7 @@ exports.getMatriculas = (req, res) => {
 
 }
 
-exports.setMatricula = (req, res) => {
+exports.addMatricula = (req, res) => {
 
     //To do
 

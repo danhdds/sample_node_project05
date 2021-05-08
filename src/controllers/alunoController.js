@@ -6,7 +6,7 @@ exports.getAlunos = (req, res) => {
 
 }
 
-exports.setAluno = (req, res) => {
+exports.addAluno = (req, res) => {
 
     //To do
 
