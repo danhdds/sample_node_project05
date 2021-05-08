@@ -1,6 +1,6 @@
-# API para gerenciamento de instituições de ensino, alunos, matriculas e faturas.
+## API para gerenciamento de instituições de ensino, alunos, matriculas e faturas.
 
-## Formatação dos dados para teste - Exemplos
+### Formatação dos dados para teste - Exemplos
 
 ##### Instituição - POST
 
