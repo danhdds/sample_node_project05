@@ -5,9 +5,9 @@ const validTipo = /(universidade|escola|creche)/gi
 
 exports.validateInstituicaoData = (req, callback) => {
 
-    if(validNome.test(req.body.nome) && validCnpj.test(req.body.cnpj) && validTipo.test(req.body.tipo)){
+    if( (req.body.nome).match(validNome) && (req.body.cnpj).match(validCnpj) && (req.body.tipo).match(validTipo) ){
 
-        callback(true);
+        callback(true)
 
     }else {
 
