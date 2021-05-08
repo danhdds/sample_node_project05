@@ -1,7 +1,7 @@
 
-const validNome = /([a-zA-Z]{3,})/g
-const validCnpj = /([0-9]{14,})/
-const validTipo = /(universidade|escola|creche)/gi
+const validNome = /([a-zA-Z]{3,})/g;
+const validCnpj = /([0-9]{14,})/;
+const validTipo = /(universidade|escola|creche)/gi;
 
 exports.validateInstituicaoData = (req, callback) => {
 
