@@ -2,12 +2,12 @@
 
 ### Como instalar em ambiente local
 
-* Antes de iniciar rodar a aplicação configure o arquivo `.env` para refletir a configuração de seu servidor de dados local.
-* Execute o comando: `npm intall`
+* Antes de rodar a aplicação, configure o arquivo `.env` para refletir a configuração de seu servidor de dados local.
+* Execute o comando: `npm install`
 * Execute o comando: `npm start`
 * Após esses procedimentos o script `./src/database/seeder.js` vai criar o banco de dados com as tabelas necessárias para a simulação.
 
-OBS: Versão do servidor em que realizei meus testes: 5.7.32 - MySQL Community Server (GPL)
+OBS: Versão do servidor em que realizei em meus testes: 5.7.32 - MySQL Community Server (GPL)
 
 ### Formatação dos dados para teste - Exemplos
 
