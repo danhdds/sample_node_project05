@@ -44,4 +44,5 @@ OBS: Versão do servidor em que realizei em meus testes: 5.7.32 - MySQL Communit
 - [ ] Fazer deploy no Heroku;
 - [ ] Refatoração de códigos, melhorias baseados no contexto do negócio e melhorar código aplicando principios do clean code;
 - [ ] Implementar log do servidor;
-- [ ] Comentar partes pertinentes do código.
+- [ ] Comentar partes pertinentes do código;
+- [ ] Implementar UPDATE, DELETE nas entidades de dados.
