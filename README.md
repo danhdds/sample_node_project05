@@ -7,7 +7,7 @@
 * Execute o comando: `npm start`
 * Após esses procedimentos o script `./src/database/seeder.js` vai criar o banco de dados com as tabelas necessárias para a simulação.
 
-OBS: Versão do servidor em que realizei em meus testes: 5.7.32 - MySQL Community Server (GPL)
+OBS: Versão do servidor em que realizei meus testes: 5.7.32 - MySQL Community Server (GPL)
 
 ### Formatação dos dados para teste - Exemplos
 
