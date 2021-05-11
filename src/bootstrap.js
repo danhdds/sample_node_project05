@@ -1,8 +1,8 @@
-const PORT = process.env.PORT || 5000; // 5000 on local env | 8080 prod.
-
 const { appRouter } = require('./routes');
-
 router = require('./routes');
+require('dotenv').config({ path: '../.env' });
+
+const PORT = process.env.SERVER_PORT;
 
 module.exports = (app, router) => {
 

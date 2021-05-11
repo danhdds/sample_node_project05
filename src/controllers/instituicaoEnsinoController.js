@@ -1,11 +1,23 @@
-const instituicaoModel = require('../models/instituicaoEnsinoModel.js');
+const instituicaoEnsinoModel = require('../models/instituicaoEnsinoModel.js');
 const validarInstituicaoEnsino = require('../helpers/validarInstituicaoEnsino.js');
 
 exports.getInstituicoesEnsino = (req, res) => {
 
-    //To do 
+    instituicaoEnsinoModel.getInstituicoesEnsino(function (err, result) {
 
-}
+        if (err) {
+            res.status(500).send({ message: err });
+            return;
+        }
+
+        if (result) {
+            res.send({ instituicoes: result});
+            return;
+        }
+
+    });
+
+};
 
 exports.addInstituicaoEnsino = (req, res) => {
 
@@ -13,8 +25,26 @@ exports.addInstituicaoEnsino = (req, res) => {
     validarInstituicaoEnsino.validateInstituicaoData(req, function(isValid){
 
         if(isValid){
-            res.send({message: "conteúdo da requisição é valido"}); // change to appropriate message
-            return;
+
+            instituicaoEnsinoModel.createInstituicao(req, function (err, instituicao, result) {
+
+                if (err) {
+                    res.status(500).send({ message: err });
+                    return;
+                }
+
+                if (instituicao) {
+                    res.send({ message: "Intituição já cadastrada!" });
+                    return;
+                }
+
+                if (result) {
+                    res.send({ message: "Intituição adicionada com sucesso!" });
+                    return;
+                }
+
+            });
+
         }
 
         if(!isValid){
@@ -24,4 +54,4 @@ exports.addInstituicaoEnsino = (req, res) => {
 
     });
 
-} // end addInstituicaoEnsino
+}; // end addInstituicaoEnsino
