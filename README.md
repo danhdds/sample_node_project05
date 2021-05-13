@@ -45,4 +45,7 @@ OBS: Versão do servidor em que realizei meus testes: 5.7.32 - MySQL Community S
 - [ ] Refatoração de códigos, melhorias baseados no contexto do negócio e melhorar código aplicando principios do clean code;
 - [ ] Implementar log do servidor;
 - [ ] Comentar partes pertinentes do código;
-- [ ] Implementar UPDATE, DELETE nas entidades de dados.
+- [ ] Implementar UPDATE, DELETE nas entidades de dados;
+- [ ] Assegurar a criação das faturas em case de erros na execussão das queries de insert na tabela fatura;
+- [ ] Especificar qual dado em especifico está inválido nas respostas a requisições inválidas;
+- [ ] Freeze objetcts, para prevenir mudanças de estados após a criação dos objetos de respostas.
