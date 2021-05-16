@@ -38,7 +38,7 @@ OBS: Versão do servidor em que realizei meus testes: 5.7.32 - MySQL Community S
 
 ## TO DO List
 
-- [ ] Formatar Datas;
+- [ ] Formatar Datas e assegurar que em caso de criação de matrículas com dia de vencimento superior a 28 dias as datas das faturas se ajustem para o dia de vencimento correto ( exemplo: caso a fatura seja criada para os meses de janeiro e fevereiro com vecimento em 31 a data da segunda fatura/mês fevereiro seja ajustada para o vencimento dia 28 (última data desse respectivo mês) );
 - [ ] Formatar Valores BRL;
 - [ ] Realizar testes unitários;
 - [ ] Fazer deploy no Heroku;
