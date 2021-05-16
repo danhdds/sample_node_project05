@@ -29,7 +29,6 @@ exports.calculateFaturas = (req, callback) => {
 
 function addMes (date, i) {
 
-    var dy = date.getDay(); 
     date.setMonth(date.getMonth() + i * 1); 
     return date; 
 
