@@ -42,7 +42,7 @@ OBS: Versão do servidor em que realizei meus testes: 5.7.32 - MySQL Community S
 - [ ] Formatar Valores BRL;
 - [ ] Realizar testes unitários;
 - [ ] Fazer deploy no Heroku;
-- [ ] Refatoração de códigos, melhorias baseados no contexto do negócio e melhorar código aplicando principios do clean code;
+- [ ] Refatoração de códigos, melhorias baseados no contexto do negócio e melhorar código assegurando o clean code;
 - [ ] Implementar log do servidor;
 - [ ] Comentar partes pertinentes do código;
 - [ ] Implementar UPDATE, DELETE nas entidades de dados;
