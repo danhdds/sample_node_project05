@@ -18,7 +18,7 @@ exports.createFatura = (valorFatura, datasVecimento, matriculaId, callback) => {
                     return;
                 }
 
-                if (result && datasVecimento[i] == datasVecimento[datasVecimento.length-1]) {
+                if ( (result) && datasVecimento.length == i+1) {
                     callback(null, result);
                     connection.end();
                     return;

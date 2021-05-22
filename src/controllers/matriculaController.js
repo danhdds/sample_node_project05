@@ -13,7 +13,7 @@ exports.getMatriculas = (req, res) => {
         }
 
         if (result) {
-            res.send({ matriculas: result});
+            res.status(200).send({ matriculas: result});
             return;
         }
 
@@ -27,20 +27,20 @@ exports.addMatricula = (req, res) => {
 
         if (isValid) {
 
-            matriculaModel.createMatricula(req, function (err, instituicao, aluno, matriculaId) {
+            matriculaModel.createMatricula(req, function (err, institution, student, matriculaId) {
 
                 if (err) {
                     res.status(500).send({ message: err });
                     return;
                 }
 
-                if (instituicao) {
-                    res.send({ message: "Id da intituição não encontrado!" });
+                if (!institution) {
+                    res.status(400).send({ message: "Id da intituição não encontrado!" });
                     return;
                 }
 
-                if (aluno) {
-                    res.send({ message: "Id do aluno não encontrado!" });
+                if (!student) {
+                    res.status(400).send({ message: "Id do aluno não encontrado!" });
                     return;
                 }
 
@@ -56,7 +56,7 @@ exports.addMatricula = (req, res) => {
                             }
             
                             if (result) {
-                                res.send({ message: "Matricula realizada com sucesso!" });
+                                res.status(200).send({ message: "Matricula realizada com sucesso!" });
                                 return;
                             }
 

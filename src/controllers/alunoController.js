@@ -11,7 +11,7 @@ exports.getAlunos = (req, res) => {
         }
 
         if (result) {
-            res.send({ alunos: result});
+            res.status(200).send({ alunos: result});
             return;
         }
 
@@ -25,20 +25,20 @@ exports.addAluno = (req, res) => {
 
         if (isValid) {
 
-            alunoModel.createAluno(req, function (err, user, result) {
+            alunoModel.createAluno(req, function (err, student, result) {
 
                 if (err) {
                     res.status(500).send({ message: err });
                     return;
                 }
 
-                if (user) {
-                    res.send({ message: "Aluno já cadastrado!" });
+                if (student) {
+                    res.status(400).send({ message: "Aluno já cadastrado!" });
                     return;
                 }
 
                 if (result) {
-                    res.send({ message: "Aluno adicionado com sucesso!" });
+                    res.status(200).send({ message: "Aluno adicionado com sucesso!" });
                     return;
                 }
 

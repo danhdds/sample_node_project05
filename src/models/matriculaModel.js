@@ -15,7 +15,7 @@ exports.createMatricula = (req, callback) => {
 
         connection.connect();
 
-        connection.query('SELECT * from `intituicao_ensino` WHERE id = (?)', [req.body.idInstituicao], function (err, instituicao) {
+        connection.query('SELECT * from `intituicao_ensino` WHERE id = (?)', [req.body.idInstituicao], function (err, institution) {
 
             if (err) {
                 callback(err, null, null, null);
@@ -23,15 +23,9 @@ exports.createMatricula = (req, callback) => {
                 return;
             }
 
-            if (instituicao[0] == undefined) {
+            if (institution.length) {
 
-                callback(null, true, null, null);
-                connection.end();
-                return;
-
-            } else {
-
-                connection.query('SELECT * from `aluno` WHERE id = (?)', [req.body.idAluno], function (err, aluno) {
+                connection.query('SELECT * from `aluno` WHERE id = (?)', [req.body.idAluno], function (err, student) {
 
                     if (err) {
                         callback(err, null, null, null);
@@ -39,13 +33,7 @@ exports.createMatricula = (req, callback) => {
                         return;
                     }
 
-                    if (aluno[0] == undefined) {
-
-                        callback(null, null, true, null);
-                        connection.end();
-                        return;
-
-                    } else {
+                    if (student.length) {
 
                         // (`valor_total_curso`, `quantidade_faturas`, `dia_vencimento_faturas`, `nome_curso`, `id_instituicao`, `id_aluno`)
                         connection.query('INSERT INTO `matricula` SET ?', matriculaObj , function (err, result) {
@@ -57,16 +45,28 @@ exports.createMatricula = (req, callback) => {
                             }
 
                             if (result) {
-                                callback(null, null, null, result.insertId);
+                                callback(null, true, true, result.insertId);
                                 connection.end();
                                 return;
                             }
 
                         });
 
+                    } else {
+
+                        callback(null, true, false, null);
+                        connection.end();
+                        return;
+
                     }
 
-                });
+                });      
+
+            } else {
+
+                callback(null, false, null, null);
+                connection.end();
+                return;
 
             } // end if else
 

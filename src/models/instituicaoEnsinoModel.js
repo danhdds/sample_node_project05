@@ -8,7 +8,7 @@ exports.createInstituicao = (req, callback) => {
 
         connection.connect();
 
-        connection.query('SELECT * from `intituicao_ensino` WHERE nome = (?) OR cnpj = (?)', [nome, cnpj], function (err, instituicao) {
+        connection.query('SELECT * from `intituicao_ensino` WHERE nome = (?) OR cnpj = (?)', [nome, cnpj], function (err, institution) {
 
             if (err) {
                 callback(err, null, null);
@@ -16,9 +16,9 @@ exports.createInstituicao = (req, callback) => {
                 return;
             }
 
-            if (instituicao[0] !== undefined) {
+            if (institution.length) {
 
-                callback(null, instituicao, null);
+                callback(null, institution, null);
                 connection.end();
                 return;
 

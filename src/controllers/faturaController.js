@@ -10,7 +10,7 @@ exports.getFaturas = (req, res) => {
         }
 
         if (result) {
-            res.send({ faturas: result});
+            res.status(200).send({ faturas: result});
             return;
         }
 

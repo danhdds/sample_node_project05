@@ -26,20 +26,20 @@ exports.addInstituicaoEnsino = (req, res) => {
 
         if(isValid){
 
-            instituicaoEnsinoModel.createInstituicao(req, function (err, instituicao, result) {
+            instituicaoEnsinoModel.createInstituicao(req, function (err, institution, result) {
 
                 if (err) {
                     res.status(500).send({ message: err });
                     return;
                 }
 
-                if (instituicao) {
-                    res.send({ message: "Intituição já cadastrada!" });
+                if (institution) {
+                    res.status(400).send({ message: "Intituição já cadastrada!" });
                     return;
                 }
 
                 if (result) {
-                    res.send({ message: "Intituição adicionada com sucesso!" });
+                    res.status(200).send({ message: "Intituição adicionada com sucesso!" });
                     return;
                 }
 

@@ -8,7 +8,7 @@ exports.createAluno = (req, callback) => {
 
         connection.connect();
 
-        connection.query('SELECT nome from `aluno` WHERE nome = (?)', [nome], function (err, user) {
+        connection.query('SELECT nome from `aluno` WHERE nome = (?)', [nome], function (err, student) {
 
             if (err) {
                 callback(err, null, null);
@@ -16,9 +16,9 @@ exports.createAluno = (req, callback) => {
                 return;
             }
 
-            if (user[0] !== undefined) {
+            if (student.length) {
 
-                callback(null, user, null);
+                callback(null, student, null);
                 connection.end();
                 return;
 
