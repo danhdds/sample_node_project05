@@ -1,8 +1,9 @@
 const { appRouter } = require('./routes');
 router = require('./routes');
-require('dotenv').config({ path: '../.env' });
+//require('dotenv').config({ path: '../.env' }); uncomment for local env
 
-const PORT = process.env.SERVER_PORT;
+//const PORT = process.env.SERVER_PORT; uncomment for local env
+const PORT = process.env.PORT || 80; // to build on heroku
 
 module.exports = (app, router) => {
 
